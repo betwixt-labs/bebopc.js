@@ -1,0 +1,65 @@
+{
+  "name": "bebopc.js",
+  "description": "This is a simple utility package",
+  "author": "<YOUR_NAME>",
+  "license": "MIT",
+  "homepage": "<YOUR_SITE_URL>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<YOUR_USER_NAME>/my-ts-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<YOUR_USER_NAME>/my-ts-lib/issues"
+  },
+  "keywords": [
+    "some",
+    "keywords",
+    "to",
+    "describe",
+    "the",
+    "package"
+  ],
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/bebopc.umd.cjs",
+  "module": "./dist/bebopc.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/bebopc.js",
+      "require": "./dist/bebopc.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && tsup ./src/index.ts --format esm --dts-only ",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "coi-serviceworker": "^0.1.7",
+    "comlink": "^4.4.1",
+    "wasi-js": "^1.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.3",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "eslint": "^8.56.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unicorn": "^49.0.0",
+    "jsdom": "^23.0.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-comlink": "^3.0.5",
+    "vite-plugin-dts": "^1.7.3",
+    "vite-plugin-inspect": "^0.8.1",
+    "vite-plugin-node-polyfills": "^0.17.0",
+    "vite-plugin-static-copy": "^1.0.0",
+    "vitest": "^1.0.4"
+  }
+}
